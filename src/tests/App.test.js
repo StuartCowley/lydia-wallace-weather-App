@@ -7,6 +7,8 @@ describe("App", () => {
   test("renders App component correctly", () => {
     render(<App location={forecast.location} />);
     const h1Element = screen.getByText(/Manchester, UK/i);
-    expect(h1Element).toBeInTheDocument();
+    expect(h1Element).toBeInTheDocument()
+    //.toBeInstanceOf(HTMLHeadingElement);
   });
+  
 });
