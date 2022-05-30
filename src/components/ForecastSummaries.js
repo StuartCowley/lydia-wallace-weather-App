@@ -1,27 +1,28 @@
 import "../styles/App.css";
 
 import React from "react";
+
 import PropTypes from "prop-types";
-import LocationDetails from "./LocationDetails";
-import ForecastSummaries from "./ForecastSummaries";
+import ForecastSummary from "./ForecastSummary";
 
-function App(props) {
-  const { location } = props;
+function ForecastSummaries(props) {
   const { forecasts } = props;
-
   return (
-    <div className="locationDetails_h1">
-      <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+    <div className="ForecastSummaries">
+      {forecasts.map((forecast) => (
+        <ForecastSummary
+          key={forecast.date}
+          date={forecast.date}
+          temperature={forecast.temperature}
+          description={forecast.description}
+          icon={forecast.icon}
+        />
+      ))}
     </div>
   );
 }
 
-App.propTypes = {
-  location: PropTypes.shape({
-    city: PropTypes.string,
-    country: PropTypes.string,
-  }).isRequired,
+ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.number,
@@ -40,4 +41,4 @@ App.propTypes = {
   ).isRequired,
 };
 
-export default App;
+export default ForecastSummaries;
