@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/ForecastSummaries.css";
 
 import React from "react";
 
@@ -8,7 +8,7 @@ import ForecastSummary from "./ForecastSummary";
 function ForecastSummaries(props) {
   const { forecasts } = props;
   return (
-    <div className="ForecastSummaries">
+    <div className="forecast-summaries">
       {forecasts.map((forecast) => (
         <ForecastSummary
           key={forecast.date}

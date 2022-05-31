@@ -6,11 +6,10 @@ import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 
 function App(props) {
-  const { location } = props;
-  const { forecasts } = props;
+  const { location, forecasts } = props;
 
   return (
-    <div className="locationDetails_h1">
+    <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries forecasts={forecasts} />
     </div>

@@ -3,10 +3,10 @@
 exports[`ForecastSummaries renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="ForecastSummaries"
+    class="forecast-summaries"
   >
     <div
-      class="ForecastSummary"
+      class="forecast-summary"
       data-testid="forecast-summary"
     >
       <div
@@ -32,7 +32,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="ForecastSummary"
+      class="forecast-summary"
       data-testid="forecast-summary"
     >
       <div

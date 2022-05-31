@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/LocationDetails.css";
 
 import React from "react";
 
@@ -6,7 +6,11 @@ import PropTypes from "prop-types";
 
 function LocationDetails(props) {
   const { city, country } = props;
-  return <h1 className="locationDetails">{`${city}, ${country}`}</h1>;
+  return (
+    <div className="location-details">
+      <h1>{`${city}, ${country}`}</h1>
+    </div>
+  );
 }
 
 LocationDetails.propTypes = {
