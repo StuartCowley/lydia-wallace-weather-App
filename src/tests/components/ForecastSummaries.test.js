@@ -16,7 +16,7 @@ describe("ForecastSummaries", () => {
       },
       humidity: 67,
       description: "test",
-      icon: "445",
+      icon: "800",
     },
     {
       date: 1525046400022,
@@ -30,7 +30,7 @@ describe("ForecastSummaries", () => {
       },
       humidity: 78,
       description: "test2",
-      icon: "405",
+      icon: "800",
     },
   ];
 

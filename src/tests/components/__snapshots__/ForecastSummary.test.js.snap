@@ -9,7 +9,7 @@ exports[`ForecastSummary renders correctly 1`] = `
     <div
       class="forecastSummary__date"
     >
-      1111111
+      Mon Apr 30 2018
     </div>
     <div
       class="forecastSummary__temperature"
@@ -25,8 +25,16 @@ exports[`ForecastSummary renders correctly 1`] = `
       class="forecastSummary__icon"
       data-testid="forecast-icon"
     >
-      stubIcon
+      <i
+        class="wi wi-day-sunny wi-flip-horizontal wi-rotate-90"
+        name="owm"
+      />
     </div>
+    <button
+      type="button"
+    >
+      More details
+    </button>
   </div>
 </DocumentFragment>
 `;

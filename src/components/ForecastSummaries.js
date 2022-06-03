@@ -6,7 +6,8 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries(props) {
-  const { forecasts } = props;
+  // eslint-disable-next-line react/prop-types
+  const { forecasts, setSelectedDate } = props;
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (
@@ -16,6 +17,7 @@ function ForecastSummaries(props) {
           temperature={forecast.temperature}
           description={forecast.description}
           icon={forecast.icon}
+          setSelectedDate={setSelectedDate}
         />
       ))}
     </div>

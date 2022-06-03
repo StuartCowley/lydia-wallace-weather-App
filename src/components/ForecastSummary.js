@@ -6,15 +6,23 @@ import WeatherIcon from "react-icons-weather";
 import PropTypes from "prop-types";
 
 function ForecastSummary(props) {
-  const { date, temperature, description, icon } = props;
+  // eslint-disable-next-line react/prop-types
+  const { date, temperature, description, icon, setSelectedDate } = props;
+  const formattedDate = new Date(date).toDateString();
+  const handleClick = () => {
+    setSelectedDate(date);
+  };
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
-      <div className="forecastSummary__date">{date}</div>
+      <div className="forecastSummary__date">{formattedDate}</div>
       <div className="forecastSummary__temperature">{`${temperature.max}°C`}</div>
       <div className="forecastSummary__description">{description}</div>
       <div className="forecastSummary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} flip="horizontal" rotate="90" />
       </div>
+      <button type="button" onClick={handleClick}>
+        More details
+      </button>
     </div>
   );
 }

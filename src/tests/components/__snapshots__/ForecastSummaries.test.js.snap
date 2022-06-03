@@ -12,7 +12,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <div
         class="forecastSummary__date"
       >
-        1525046400000
+        Mon Apr 30 2018
       </div>
       <div
         class="forecastSummary__temperature"
@@ -28,8 +28,16 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecastSummary__icon"
         data-testid="forecast-icon"
       >
-        445
+        <i
+          class="wi wi-day-sunny wi-flip-horizontal wi-rotate-90"
+          name="owm"
+        />
       </div>
+      <button
+        type="button"
+      >
+        More details
+      </button>
     </div>
     <div
       class="forecast-summary"
@@ -38,7 +46,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <div
         class="forecastSummary__date"
       >
-        1525046400022
+        Mon Apr 30 2018
       </div>
       <div
         class="forecastSummary__temperature"
@@ -54,8 +62,16 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecastSummary__icon"
         data-testid="forecast-icon"
       >
-        405
+        <i
+          class="wi wi-day-sunny wi-flip-horizontal wi-rotate-90"
+          name="owm"
+        />
       </div>
+      <button
+        type="button"
+      >
+        More details
+      </button>
     </div>
   </div>
 </DocumentFragment>
