@@ -6,7 +6,6 @@ import WeatherIcon from "react-icons-weather";
 import PropTypes from "prop-types";
 
 function ForecastSummary(props) {
-  // eslint-disable-next-line react/prop-types
   const { date, temperature, description, icon, setSelectedDate } = props;
   const formattedDate = new Date(date).toDateString();
   const handleClick = () => {
@@ -35,6 +34,7 @@ ForecastSummary.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
   }).isRequired,
+  setSelectedDate: PropTypes.bool.isRequired,
 };
 
 export default ForecastSummary;

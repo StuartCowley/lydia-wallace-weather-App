@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries(props) {
-  // eslint-disable-next-line react/prop-types
   const { forecasts, setSelectedDate } = props;
   return (
     <div className="forecast-summaries">
@@ -41,6 +40,7 @@ ForecastSummaries.propTypes = {
       icon: PropTypes.string,
     })
   ).isRequired,
+  setSelectedDate: PropTypes.bool.isRequired,
 };
 
 export default ForecastSummaries;
