@@ -1,48 +1,53 @@
 import "../styles/App.css";
 
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+import axios from "axios";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import DetailedForecast from "./DetailedForecast";
+import CitySearch from "./CitySearch";
 
-function App(props) {
-  const { location, forecasts } = props;
-  const initialDate = forecasts[0];
-  const [selectedDate, setSelectedDate] = useState(initialDate.date);
+function App() {
+  // get forecasts
+  const [forecasts, setForecasts] = useState([]);
+  // get location
+  const [location, setLocation] = useState({ city: "", country: "" });
+  const [selectedDate, setSelectedDate] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const getForecast = (endpoint) => {
+    return axios
+      .get(endpoint)
+      .then((response) => {
+        setSelectedDate(response.data.forecasts[0].date);
+        setForecasts(response.data.forecasts);
+        setLocation(response.data.location);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="weather-app">
-      <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries
-        forecasts={forecasts}
-        setSelectedDate={setSelectedDate}
+      <h1>Welcome to the weather app, search for a city to see the weather</h1>
+      <CitySearch
+        searchTerm={searchTerm}
+        getForecast={getForecast}
+        setSearchTerm={setSearchTerm}
       />
-      <DetailedForecast selectedDate={selectedDate} forecasts={forecasts} />
+      {location.city && (
+        <>
+          <LocationDetails city={location.city} country={location.country} />
+          <ForecastSummaries
+            forecasts={forecasts}
+            setSelectedDate={setSelectedDate}
+          />
+          <DetailedForecast selectedDate={selectedDate} forecasts={forecasts} />
+        </>
+      )}
     </div>
   );
 }
-
-App.propTypes = {
-  location: PropTypes.shape({
-    city: PropTypes.string,
-    country: PropTypes.string,
-  }).isRequired,
-  forecasts: PropTypes.arrayOf(
-    PropTypes.shape({
-      date: PropTypes.number,
-      temperature: PropTypes.shape({
-        max: PropTypes.number,
-        min: PropTypes.number,
-      }),
-      wind: PropTypes.shape({
-        speed: PropTypes.number,
-        direction: PropTypes.string,
-      }),
-      humidity: PropTypes.number,
-      description: PropTypes.string,
-      icon: PropTypes.string,
-    })
-  ).isRequired,
-};
 
 export default App;

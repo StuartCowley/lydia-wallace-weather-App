@@ -36,7 +36,7 @@ DetailedForecast.propTypes = {
       }),
       humidity: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.number,
     })
   ).isRequired,
 };

@@ -1,5 +1,9 @@
 # Weather-App
-This is a project using React to create a weather app showing a 5 day forcast.
+This is a project using React to create a weather app showing a 5 day forecast.
+
+# API
+mcr-codes-weather-app.herokuapp.com default API,
+mcr-codes-weather-app-alt.herokuapp.com alternative API (just in case main API is not working).
 
 # Getting Started with Create React App
 

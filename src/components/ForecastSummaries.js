@@ -37,10 +37,10 @@ ForecastSummaries.propTypes = {
       }),
       humidity: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.number,
     })
   ).isRequired,
-  setSelectedDate: PropTypes.bool.isRequired,
+  setSelectedDate: PropTypes.func.isRequired,
 };
 
 export default ForecastSummaries;

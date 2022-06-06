@@ -16,7 +16,7 @@ describe("ForecastSummaries", () => {
       },
       humidity: 67,
       description: "test",
-      icon: "800",
+      icon: 800,
     },
     {
       date: 1525046400022,
@@ -30,18 +30,27 @@ describe("ForecastSummaries", () => {
       },
       humidity: 78,
       description: "test2",
-      icon: "800",
+      icon: 800,
     },
   ];
+  const setterProp = { setSelectedDate: () => {} };
 
   it("renders correctly", () => {
-    const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
+    const { asFragment } = render(
+      <ForecastSummaries
+        forecasts={validProps}
+        setSelectedDate={setterProp.setSelectedDate}
+      />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
   it("renders the correct number of ForecastSummary instances", () => {
     const { getAllByTestId } = render(
-      <ForecastSummaries forecasts={validProps} />
+      <ForecastSummaries
+        forecasts={validProps}
+        setSelectedDate={setterProp.setSelectedDate}
+      />
     );
     expect(getAllByTestId("forecast-summary")).toHaveLength(2);
   });

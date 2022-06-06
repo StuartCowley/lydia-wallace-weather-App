@@ -6,12 +6,13 @@ describe("ForecastSummary", () => {
   const validProps = {
     date: 1525046400000,
     description: "Stub description",
-    icon: "800",
+    icon: 800,
     temperature: {
       min: 12,
       max: 22,
     },
   };
+  const setterProp = { setSelectedDate: () => {} };
 
   it("renders correctly", () => {
     const { asFragment } = render(
@@ -20,6 +21,7 @@ describe("ForecastSummary", () => {
         description={validProps.description}
         icon={validProps.icon}
         temperature={validProps.temperature}
+        setSelectedDate={setterProp.setSelectedDate}
       />
     );
     expect(asFragment()).toMatchSnapshot();
@@ -32,6 +34,7 @@ describe("ForecastSummary", () => {
         description={validProps.description}
         icon={validProps.icon}
         temperature={validProps.temperature}
+        setSelectedDate={setterProp.setSelectedDate}
       />
     );
 
