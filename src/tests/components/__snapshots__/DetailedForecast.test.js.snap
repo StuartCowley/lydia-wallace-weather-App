@@ -5,11 +5,13 @@ exports[`Detailed Forecast renders correctly 1`] = `
   <div
     class="detailed-forecast"
   >
-    <div
-      class="detailedForecast__date"
-    >
-      Mon Apr 30 2018
-    </div>
+    <b>
+      <div
+        class="detailedForecast__date"
+      >
+        Details for Mon Apr 30 2018
+      </div>
+    </b>
     <div
       class="detailedForecast__maxTemperature"
     >

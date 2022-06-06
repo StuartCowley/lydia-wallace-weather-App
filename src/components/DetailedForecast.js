@@ -11,7 +11,9 @@ function DetailedForecast({ forecasts, selectedDate }) {
 
   return (
     <div className="detailed-forecast">
-      <div className="detailedForecast__date">{formattedDate}</div>
+      <b>
+        <div className="detailedForecast__date">{`Details for ${formattedDate}`}</div>
+      </b>
       <div className="detailedForecast__maxTemperature">{`Max Temperature: ${selectedForecast.temperature.max}°C`}</div>
       <div className="detailedForecast__minTemperature">{`Min Temperature: ${selectedForecast.temperature.min}°C`}</div>
       <div className="detailedForecast__humidity">{`Humidity: ${selectedForecast.humidity}%`}</div>

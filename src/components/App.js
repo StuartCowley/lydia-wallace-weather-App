@@ -14,6 +14,9 @@ function App() {
   const [location, setLocation] = useState({ city: "", country: "" });
   const [selectedDate, setSelectedDate] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
+  const [firstLine, setFirstLine] = useState(
+    "Welcome to the weather app, search for your city to see the weather"
+  );
 
   const getForecast = (endpoint) => {
     return axios
@@ -30,15 +33,17 @@ function App() {
 
   return (
     <div className="weather-app">
-      <h1>Welcome to the weather app, search for a city to see the weather</h1>
+      <h1>{firstLine}</h1>
       <CitySearch
         searchTerm={searchTerm}
         getForecast={getForecast}
         setSearchTerm={setSearchTerm}
+        setFirstLine={setFirstLine}
       />
       {location.city && (
         <>
           <LocationDetails city={location.city} country={location.country} />
+          <h3>Summary for the week</h3>
           <ForecastSummaries
             forecasts={forecasts}
             setSelectedDate={setSelectedDate}

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CitySearch renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="city-search"
+  >
+    <form>
+      <input
+        placeholder="Search for a city"
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

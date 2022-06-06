@@ -6,21 +6,23 @@ exports[`App renders correctly 1`] = `
     class="weather-app"
   >
     <h1>
-      Welcome to the weather app, search for a city to see the weather
+      Welcome to the weather app, search for your city to see the weather
     </h1>
     <div
       class="city-search"
     >
-      <input
-        placeholder="Search for a city"
-        type="text"
-        value=""
-      />
-      <button
-        type="submit"
-      >
-        Submit
-      </button>
+      <form>
+        <input
+          placeholder="Search for a city"
+          type="text"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
     </div>
   </div>
 </DocumentFragment>

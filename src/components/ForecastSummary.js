@@ -13,7 +13,9 @@ function ForecastSummary(props) {
   };
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
-      <div className="forecastSummary__date">{formattedDate}</div>
+      <b>
+        <div className="forecastSummary__date">{formattedDate}</div>
+      </b>
       <div className="forecastSummary__temperature">{`${temperature.max}°C`}</div>
       <div className="forecastSummary__description">{description}</div>
       <div className="forecastSummary__icon" data-testid="forecast-icon">
