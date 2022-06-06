@@ -30,13 +30,13 @@ function App() {
       .catch((error) => {
         const { status } = error.response;
         if (status === 404) {
-          setFirstLine("That location isn't valid, try searching again", error);
+          setFirstLine("That location isn't valid, try searching again");
         }
         if (status === 500) {
           setFirstLine(
-            "Oops, it looks like there was a server error, try again later",
-            error
+            "Oops, it looks like there was a server error, try again later"
           );
+          console.log(error);
         }
       });
   };

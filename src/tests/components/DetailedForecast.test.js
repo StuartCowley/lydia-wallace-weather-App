@@ -44,4 +44,8 @@ describe("Detailed Forecast", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  // further test plans:
+  // it("renders correct values for props", () => {});
+  // it("changes based on which date is selected", () => {});
 });

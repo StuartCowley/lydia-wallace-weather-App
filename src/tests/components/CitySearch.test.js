@@ -22,6 +22,8 @@ describe("CitySearch", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("renders correct placeholder text", () => {});
-  it("renders a button with 'submit'", () => {});
+  // it("renders correct placeholder text", () => {});
+  // it("renders a button with 'submit'", () => {});
+  // it("updates the data being displayed", () => {});
+  // it("updates the first line based on the response code", () => {});
 });
