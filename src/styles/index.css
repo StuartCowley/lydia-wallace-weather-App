@@ -5,7 +5,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(152, 207, 244);
+  background: rgb(93,116,210);
+background: linear-gradient(180deg, rgba(93,116,210,1) 0%, rgba(93,194,255,1) 90%) no-repeat center center fixed; 
+background-size: cover;
 }
 
 code {

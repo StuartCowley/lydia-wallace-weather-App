@@ -1,5 +1,3 @@
-import "../styles/CitySearch.css";
-
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -13,7 +11,7 @@ function CitySearch({ searchTerm, getForecast, setSearchTerm, setFirstLine }) {
       `https://mcr-codes-weather-app-alt.herokuapp.com/forecast?city=${searchTerm}`
     );
     setSearchTerm("");
-    setFirstLine("Search again for more cities");
+    setFirstLine("");
   };
 
   return (

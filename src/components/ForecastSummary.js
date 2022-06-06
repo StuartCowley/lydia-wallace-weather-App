@@ -1,5 +1,3 @@
-import "../styles/ForecastSummary.css";
-
 import React from "react";
 import WeatherIcon from "react-icons-weather";
 

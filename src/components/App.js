@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import "../styles/App.css";
 
 import React, { useState } from "react";
@@ -26,14 +27,23 @@ function App() {
         setForecasts(response.data.forecasts);
         setLocation(response.data.location);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        const { status } = error.response;
+        if (status === 404) {
+          setFirstLine("That location isn't valid, try searching again", error);
+        }
+        if (status === 500) {
+          setFirstLine(
+            "Oops, it looks like there was a server error, try again later",
+            error
+          );
+        }
       });
   };
 
   return (
     <div className="weather-app">
-      <h1>{firstLine}</h1>
+      <h2>{firstLine}</h2>
       <CitySearch
         searchTerm={searchTerm}
         getForecast={getForecast}
