@@ -1,3 +1,10 @@
+# Weather-App
+This is a project using React to create a weather app showing a 5 day forecast.
+
+# API
+mcr-codes-weather-app.herokuapp.com default API,
+mcr-codes-weather-app-alt.herokuapp.com alternative API (just in case main API is not working).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Weather-App
+
